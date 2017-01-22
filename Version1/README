@@ -1,5 +1,5 @@
 Basic first version of word counting program (no fancy IPC):
 
-./word-count N STOP_WORDS FILE1...
+Usage: ./word-count N STOP_WORDS FILE1...
 
 Finds top N words by frequency in FILE1... , excluding words in the STOP_WORDS file
