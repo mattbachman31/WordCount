@@ -1,1 +1,6 @@
+Usage: ./word-count N STOP_WORDS FILE1...
 
+Finds top N words by frequency in FILE1... , excluding words in the STOP_WORDS file
+
+This version has created a daemon server that services requests from clients through a named pipe.
+The daemon then forks off child processes to communicate results back to a pid-unique named pipe with the client
