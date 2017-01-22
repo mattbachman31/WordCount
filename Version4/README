@@ -1,1 +1,9 @@
-Version 4
+Usage: ./word-count N STOP_WORDS FILE1...
+
+Finds top N words by frequency in FILE1... , excluding words in the STOP_WORDS file
+
+The final version uses the daemon just like Version 3. However, this one deals with IPC of results differently.
+
+This version uses a shared memory segment mmap'd to the server process (named after the login name of the user using the program) for initial client/server communication.
+Once the daemon forks off the worker process, the worker sends results back in the shared memory segment.
+Synchronization between processes done with semaphores; file lock used to ensure one daemon created
