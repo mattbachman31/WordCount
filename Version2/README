@@ -1,1 +1,5 @@
-Version 2
+Usage: ./word-count N STOP_WORDS FILE1...
+
+Finds top N words by frequency in FILE1... , excluding words in the STOP_WORDS file
+
+This version uses a separate child process (using fork) for each file in FILE1..., with IPC from child back to parent occuring via anonymous pipes
